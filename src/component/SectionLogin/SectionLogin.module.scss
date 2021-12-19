@@ -1,0 +1,68 @@
+.sectionLoginWrapper {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  min-height: 860px;
+  padding: 31px 0 31px 82px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+}
+
+.loginForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.title {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 28px;
+  line-height: 34px;
+  margin-bottom: 12px;
+}
+
+.containerLinkSign {
+  margin-bottom: 64px;
+}
+
+.text {
+  font-size: 14px;
+  line-height: 24px;
+  text-align: center;
+  color: #333333;
+  margin-right: 8px;
+}
+
+.linkToSign {
+  font-style: normal;
+  font-size: 14px;
+  line-height: 24px;
+  color: #065BEA;
+}
+
+.containerInputs {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 30px;
+}
+
+.credential {
+  a:not(:last-child) {
+    margin-right: 25px;
+  }
+}
+
+.linkToCredential {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 24px;
+  color: #75777A;
+  transition: all .6s ease;
+}
+
+.linkToCredential:hover {
+  cursor: pointer;
+  color: #333333;
+}

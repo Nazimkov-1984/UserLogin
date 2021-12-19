@@ -1,0 +1,91 @@
+.wrapper {
+  width: 798px;
+  height: 860px;
+  background-size: cover;
+  background: #065BEA url("../../assets/img/graphics.png") no-repeat center center;
+  border-radius: 15px;
+  box-sizing: border-box;
+  padding-top: 186px;
+}
+
+.slideWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 84px;
+}
+
+.sliderImage {
+  width: 512px;
+  height: 332px;
+  margin-bottom: 63px;
+}
+
+.slideTitle, .slideText {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+}
+
+.slideTitle {
+  margin-bottom: 15px;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 26px;
+  color: #FFFFFF;
+}
+
+.slideText {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 24px;
+  color: #FFFFFF;
+  text-align: center;
+}
+
+.button__bar {
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  padding: 0;
+  width: 100px;
+}
+
+.button__bar li {
+  list-style: none;
+  cursor: pointer;
+  display: inline-block;
+  margin: 0 45px;
+  padding: 0;
+}
+
+.button__bar li button {
+  border: none;
+  background: rgba(255, 255, 255, 0.4);
+  color: transparent;
+  cursor: pointer;
+  display: block;
+  height: 8px;
+  width: 8px;
+  border-radius: 50%;
+}
+
+.button__bar li.slick-active button {
+  background-color: #FFFFFF;
+}
+
+.button__bar li button:hover,
+.button__bar li button:focus {
+  background: rgb(255, 255, 255,);
+  outline: 0;
+}
+
+@media (min-width: 1230px) {
+  .wrapper {
+    width: 650px;
+  }
+}
