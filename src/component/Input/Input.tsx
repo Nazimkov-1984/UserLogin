@@ -1,5 +1,5 @@
 import Label from "./Label";
-import {useCallback} from "react";
+import { useCallback, useMemo } from "react";
 import classNames from "classnames";
 
 const scss = require("./Input.module.scss");
@@ -25,19 +25,31 @@ const Input = (props: IProps) => {
         props?.onChange(event?.target?.value, event);
     }, [props]);
 
-    console.log(props.isNotValid);
+    const type = useMemo(() => {
+        switch (props.type) {
+            case (InputTypes.EMAIL): {
+                return "email";
+            }
+            case (InputTypes.PASSWORD): {
+                return "password";
+
+            }
+            default: return "text"
+        }
+    }, [props.type])
+
 
     return (
         <div className={scss.inputContainer}>
             {props.labelText && (
-                <Label text={props.labelText} for={props.for}/>
+                <Label text={props.labelText} for={props.for} />
             )}
             <input
                 value={props.value}
                 onChange={onChangeHandler}
-                type={props.type === InputTypes.EMAIL ? "email" : "text"}
-                className={classNames(scss.input, {[scss.inputNotValid]: props.isNotValid !== undefined && props.isNotValid})}
-                placeholder={props.placeholderText ? props.placeholderText : ""}/>
+                type={type}
+                className={classNames(scss.input, { [scss.inputNotValid]: props.isNotValid !== undefined && props.isNotValid },{[scss.validInput]: (props.value.length >0 && !props.isNotValid)})}
+                placeholder={props.placeholderText ? props.placeholderText : ""} />
         </div>
     )
 }

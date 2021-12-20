@@ -41,3 +41,13 @@
 .inputNotValid {
   border-color: #FF4B26 !important;
 }
+.validInput{
+  border-color: #6FCF97 !important;
+
+}
+
+@media (max-width: 1230px) {
+ .input{
+  max-width: 340px;
+ } 
+}

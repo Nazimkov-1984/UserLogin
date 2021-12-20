@@ -8,3 +8,11 @@
   justify-content: center;
   height: 100vh;
 }
+@media (max-width: 1230px) {
+  .wrapper{
+    flex-direction: column;
+    overflow-y: scroll;
+   height: auto;
+   padding: 0;
+  }
+}

@@ -11,6 +11,11 @@
   color: #FFFFFF;
   border: none;
   position: relative;
+  transition: all .6s ease;
+}
+.buttonHover:hover{
+  cursor: pointer;
+  background:#0451D2 ;
 }
 
 .buttonSignIn:after {
@@ -32,5 +37,10 @@
 
 .buttonDisable:after {
   background-color: transparent;
-
 }
+
+@media (max-width: 1230px) {
+  .buttonSignIn{
+   max-width: 340px;
+  } 
+ }
